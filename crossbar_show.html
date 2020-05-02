@@ -1,0 +1,1136 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <link href="main.css" rel="stylesheet" type="text/css" media="screen"/>
+    <style>
+	#str{
+	background-color:wheat;
+	}
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body background="image/ii.jpg">
+  <form>
+  	<div style="position: absolute; top:0; left:0; width: 800px;height: 100px; text-align:left; color:maroon">
+	<i><b>ENTER THE NUMBERS OF NODES: </i></b>
+	<input type="text" id="str" />
+    <input type="button" value="SUBMIT" id="SUBMIT"  onclick="rings()" />
+	<br>
+    <i><b>ENTER THE SOURCE NODE:
+	<input type="text" id="se" />
+	<div class="hims">
+	ENTER THE DESTINATIONS NODE:
+	<input type="text" id="de" /></i></b>
+	
+	 <input type="button" value="SUBMIT" id="SUBMIT" onclick="cir1()" />
+	<input type="button" value="Reset" onClick="history.go(0)">
+	</div>
+	</div>
+	<a href="index.html"><p align="right"><b>BackToHome</b></p></a>
+	<big> <i style="color:navy; font-size:25px"><br><br><marquee width="100%"><b style="color:red">NOTE:</b>Enter the number of nodes for crossbar network after than enter the source node and destination node to describe the path between two nodes.</big></marquee>
+	</form>
+	   
+	   
+	<br>
+    <canvas id="myCanvas" width="1275" height="550"style="border:1px solid blue;background: navy;"></canvas>
+    
+
+  <script>
+
+
+	function rings()
+	   {
+              var canvas = document.getElementById('myCanvas'),X=80, Y = 60, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value;
+if(isNaN(document.getElementById("str").value))
+{
+alert("please do not enter any special character");
+clear();
+}
+            if(str==1)
+             { 
+            alert('not allowed');
+             }
+              square();
+              square1();
+            if(str==0)
+             { 
+            alert('not allowed');
+             }
+           if(str==1)
+            {
+           alert('not possible');
+           }
+          if(str>8)
+           {
+           alert('not available');
+clears();
+          }
+              if(str==2)
+                {
+	          for(submit=1;submit<=2;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+	             }
+                 }
+              if (str==2)
+	           {
+	              for (i=0;i<2;i++)
+	               {
+	                context.linewidth=5;
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,140);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+               if(str==2)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+	               
+	           }	
+               if(str==3)
+                  { 
+                     for(submit=1;submit<=3;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+                      } 
+                               
+                  }
+                if (str==3)
+	           {
+	              for (i=0;i<3;i++)
+	               {
+	                context.linewidth=5;
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,200);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+               if(str==3)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+                       context.fillText("P3",40,180);
+                       context.fillText("M3",189,30);
+	               
+	           }	
+                 if(str==4)
+                  { 
+                     for(submit=1;submit<=4;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+                      }
+                   } 
+                if (str==4)
+	           {
+	              for (i=0;i<4;i++)
+	               {
+	                context.linewidth=5;
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,260);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+                 if(str==4)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+                       context.fillText("P3",40,180);
+                       context.fillText("M3",189,30);
+                       context.fillText("P3",40,240);
+                       context.fillText("M3",250,30);
+	               
+	           }	
+                if(str==5)
+                  { 
+                     for(submit=1;submit<=5;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+                      }
+                   } 
+               if (str==5)
+	           {
+	              for (i=0;i<5;i++)
+	               {
+	                context.linewidth=5;
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,320);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+                 if(str==5)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+                       context.fillText("P3",40,180);
+                       context.fillText("M3",189,30);
+                       context.fillText("P4",40,240);
+                       context.fillText("M4",250,30);
+                       context.fillText("P5",40,300);
+                       context.fillText("M5",310,30);
+	               
+	           }	
+              if(str==6)
+                  { 
+                     for(submit=1;submit<=6;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+                      } 
+                   }
+               if (str==6)
+	           {
+	              for (i=0;i<6;i++)
+	               {
+	                context.linewidth=5;
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,380);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+               if(str==6)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+                       context.fillText("P3",40,180);
+                       context.fillText("M3",189,30);
+                       context.fillText("P4",40,240);
+                       context.fillText("M4",250,30);
+                       context.fillText("P5",40,300);
+                       context.fillText("M5",310,30);
+                       context.fillText("P6",40,365);
+                       context.fillText("M6",370,30);
+	               
+	           }	
+               if(str==7)
+                  { 
+                     for(submit=1;submit<=7;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+                      }
+                   } 
+               if (str==7)
+	           {
+	              for (i=0;i<7;i++)
+	               {
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,440);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+                if(str==7)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+                       context.fillText("P3",40,180);
+                       context.fillText("M3",189,30);
+                       context.fillText("P4",40,240);
+                       context.fillText("M4",250,30);
+                       context.fillText("P5",40,300);
+                       context.fillText("M5",310,30);
+                       context.fillText("P6",40,365);
+                       context.fillText("M6",370,30);
+	               context.fillText("P7",40,420);
+                       context.fillText("M7",430,30);
+	               
+	           }	
+                 if(str==8)
+                  { 
+                     for(submit=1;submit<=8;submit++)
+                     {            
+                        context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	                context.fillStyle = 'white';
+                        context.fill();
+	                context.lineWidth = l;
+                        context.strokeStyle = 'white';
+                        context.stroke();
+	                X=X+60;Y=Y+0;
+                      }
+                   } 
+               if (str==8)
+	           {
+	              for (i=0;i<8;i++)
+	               {
+	                
+                        context.lineWidth = 5;
+                        context.beginPath();
+                        context.moveTo(80+i*60,40);
+                        context.lineTo(80+i*60,500);
+		        context.strokeStyle = 'white';
+                        context.stroke();
+                        }
+	            }
+               if(str==8)
+	           {
+                       
+	               context.font="15px georgia";
+	               context.fillText("P1",40,60);
+	               context.fillText("M1",72,30);
+	               context.fillText("P2",40,123);
+                       context.fillText("M2",132,30);
+                       context.fillText("P3",40,180);
+                       context.fillText("M3",189,30);
+                       context.fillText("P4",40,240);
+                       context.fillText("M4",250,30);
+                       context.fillText("P5",40,300);
+                       context.fillText("M5",310,30);
+                       context.fillText("P6",40,365);
+                       context.fillText("M6",370,30);
+	               context.fillText("P7",40,420);
+                       context.fillText("M7",430,30);
+                       context.fillText("P8",40,480);
+                       context.fillText("M8",490,30);
+	               
+	           }	
+                 rings1();
+                
+             }
+      function rings1()
+	   {
+              var canvas = document.getElementById('myCanvas'),X=80, Y = 120, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value;
+              if(str==2)
+               {  
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+	       }
+              if(str==3)
+                {
+                 for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+                 }
+               rings2();
+                }
+              if(str==4)
+                {
+                 for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+                 }
+               rings2();
+               rings3();
+                }
+               if(str==5)
+                {
+                 for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+                 }
+               rings2();
+               rings3();
+               rings4();
+                }
+               
+               if(str==6)
+                {
+                 for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+                 }
+               rings2();
+               rings3();
+               rings4();
+               rings5();
+                }
+             if(str==7)
+                {
+                 for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+                 }
+               rings2();
+               rings3();
+               rings4();
+               rings5();
+               rings6();
+                }
+            if(str==8)
+                {
+                 for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+                 }
+               rings2();
+               rings3();
+               rings4();
+               rings5();
+               rings6();
+               rings7();
+                }
+              }
+       function rings2()
+           {
+             var canvas = document.getElementById('myCanvas'),X=80, Y = 180, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value; 
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+           }
+     function rings3()
+            {
+             var canvas = document.getElementById('myCanvas'),X=80, Y = 240, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value; 
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+           }
+      function rings4()
+           {
+             var canvas = document.getElementById('myCanvas'),X=80, Y = 300, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value; 
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+           }
+       function rings5()
+           {
+             var canvas = document.getElementById('myCanvas'),X=80, Y = 360, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value; 
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+           }
+       function rings6()
+           {
+             var canvas = document.getElementById('myCanvas'),X=80, Y = 420, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value; 
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+           }
+       function rings7()
+           {
+             var canvas = document.getElementById('myCanvas'),X=80, Y = 480, r = 4,l=5;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value; 
+	      for(submit=1;submit<=str;submit++)
+	         {
+                    context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	            context.fillStyle = 'white';
+                    context.fill();
+	            context.lineWidth = l;
+                    context.strokeStyle = 'white';
+                    context.stroke();
+	            X=X+60;Y=Y+0;
+	         }
+           }
+      function square()
+           {
+             var canvas = document.getElementById('myCanvas'),X=40,Y=45,w=20,h=20;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value;
+             
+              for(submit=1;submit<=str;submit++)
+                {
+                  context.fillStyle='blue';
+                  context.fill();
+                  context.fillRect(X,Y,w,h);
+                  X=X+0;Y=Y+60;
+                }
+				
+           }
+      function square1()
+           {
+             var canvas = document.getElementById('myCanvas'),X=70,Y=15,w=20,h=20;
+              var context = canvas.getContext('2d');
+              context.beginPath();
+              var str = document.getElementById("str").value;
+      
+              for(submit=1;submit<=str;submit++)
+                {
+                  context.fillStyle='blue';
+                  context.fill();
+                  context.fillRect(X,Y,w,h);
+                  X=X+60;Y=Y+0;
+                }
+           }
+		   
+		  
+	  function cir1()
+           {
+             var c = document.getElementById("myCanvas");
+             var ctx = c.getContext("2d");
+             ctx.beginPath();
+             var de = document.getElementById("de").value;  
+             var str = document.getElementById("str").value;  
+             var se = document.getElementById("se").value;
+if(se==0||de==0)
+{
+alert("do not select source and destination node as 0");
+}	
+           if(str==2)
+            {
+             if(se>2 || de>2)
+                 {
+               alert('not allowed');
+                }
+            }
+           if(str==3)
+            {
+             if(se>3 || de>3)
+                 {
+               alert('not allowed');
+                }
+            }
+           if(str==4)
+            {
+             if(se>4 || de>4)
+                 {
+               alert('not allowed');
+                }
+            }
+
+          if(str==5)
+            {
+             if(se>5 || de>5)
+                 {
+               alert('not allowed');
+                }
+            }
+
+        if(str==6)
+            {
+             if(se>6 || de>6)
+                 {
+               alert('not allowed');
+                }
+            }
+
+        if(str==7)
+            {
+             if(se>7 || de>7)
+                 {
+               alert('not allowed');
+                }
+            }
+
+        if(str==8)
+            {
+             if(se>8 || de>8)
+                 {
+               alert('not allowed');
+                }
+            }
+
+
+
+
+             if(se==1 && de==1)
+               {
+                 ctx.arc(80, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+              }
+
+               
+             if(se==1 && de==2)
+               {
+                 ctx.arc(140, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               
+                }
+
+			   if(se==1 && de==3)
+               {
+                 ctx.arc(200, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==1 && de==4)
+               {
+                 ctx.arc(260, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			    if(se==1 && de==5)
+               {
+                 ctx.arc(320, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==1 && de==6)
+               {
+                 ctx.arc(380, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==1 && de==7)
+               {
+                 ctx.arc(440, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==1 && de==8)
+               {
+                 ctx.arc(500, 60, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==1)
+               {
+                 ctx.arc(80, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==2)
+               {
+                 ctx.arc(140, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==3)
+               {
+                 ctx.arc(200, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==4)
+               {
+                 ctx.arc(260, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==5)
+               {
+                 ctx.arc(320, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==6)
+               {
+                 ctx.arc(380, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==7)
+               {
+                 ctx.arc(440, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==2 && de==8)
+               {
+                 ctx.arc(500, 120, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==1)
+               {
+                 ctx.arc(80, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==2)
+               {
+                 ctx.arc(140, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==3)
+               {
+                 ctx.arc(200, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==4)
+               {
+                 ctx.arc(260, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==5)
+               {
+                 ctx.arc(320, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==6)
+               {
+                 ctx.arc(380, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==7)
+               {
+                 ctx.arc(440, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==3 && de==8)
+               {
+                 ctx.arc(500, 180, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==1)
+               {
+                 ctx.arc(80, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==2)
+               {
+                 ctx.arc(140, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==3)
+               {
+                 ctx.arc(200, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==4)
+               {
+                 ctx.arc(260, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==5)
+               {
+                 ctx.arc(320, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==6)
+               {
+                 ctx.arc(380, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==7)
+               {
+                 ctx.arc(440, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==4 && de==8)
+               {
+                 ctx.arc(500, 240, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==5 && de==1)
+               {
+                 ctx.arc(80, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==5 && de==2)
+               {
+                 ctx.arc(140, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==5 && de==3)
+               {
+                 ctx.arc(200, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==5 && de==4)
+               {
+                 ctx.arc(260, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==5 && de==5)
+               {
+                 ctx.arc(320, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==5 && de==6)
+               {
+                 ctx.arc(380, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==5 && de==7)
+               {
+                 ctx.arc(440, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==5 && de==8)
+               {
+                 ctx.arc(500, 300, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==1)
+               {
+                 ctx.arc(80, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==2)
+               {
+                 ctx.arc(140, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==3)
+               {
+                 ctx.arc(200, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==4)
+               {
+                 ctx.arc(260, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==5)
+               {
+                 ctx.arc(320, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==6)
+               {
+                 ctx.arc(380, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==7)
+               {
+                 ctx.arc(440, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==6 && de==8)
+               {
+                 ctx.arc(500, 360, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==1)
+               {
+                 ctx.arc(80, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==7 && de==2)
+               {
+                 ctx.arc(140, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==3)
+               {
+                 ctx.arc(200, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==4)
+               {
+                 ctx.arc(260, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==5)
+               {
+                 ctx.arc(320, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==6)
+               {
+                 ctx.arc(380, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==7)
+               {
+                 ctx.arc(440, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==7 && de==8)
+               {
+                 ctx.arc(500, 420, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==8 && de==1)
+               {
+                 ctx.arc(80, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==8 && de==2)
+               {
+                 ctx.arc(140, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==8 && de==3)
+               {
+                 ctx.arc(200, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==8 && de==4)
+               {
+                 ctx.arc(260, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==8 && de==5)
+               {
+                 ctx.arc(320, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==8 && de==6)
+               {
+                 ctx.arc(380, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }
+			   if(se==8 && de==7)
+               {
+                 ctx.arc(440, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }if(se==8 && de==8)
+               {
+                 ctx.arc(500, 480, 6, 0, 2 * Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+                 ctx.stroke();
+               }            			   
+}
+function clears()
+{
+var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+context.clearRect(0,0,canvas.width,canvas.height);
+}
+
+
+
+  </script>
+
+
+  </body>
+</html>      
+	

@@ -1,0 +1,177 @@
+#title
+{
+	background-color:#162447;
+}
+#titlering
+{
+	background-color:#eb4559;
+}
+h1
+{
+  font-family: "Montserrat-Black";
+  font-size:3rem;
+  line-height: 1.5;
+  color:white;
+}
+.container-fluid
+{
+  padding:3% 15%;
+}
+.paragraph
+{
+padding-top:3%;	
+color:grey;
+
+}
+#about
+{
+	background-color:#f0f0f0;
+	padding-top:20px;
+	
+	padding-bottom:20px;
+}
+body{
+  font-family: "Montserrat";
+}
+.navbar-brand
+{
+  font-family: 'Ubuntu';
+  font-size:2.5rem;
+  font-weight:bold;
+}
+.navbar{
+  padding-bottom:4.5rem;
+}
+.nav-item{
+padding:0 18px;
+}
+.nav-link{
+font-size:1.2rem;
+font-weight:light;
+}
+
+/*.img
+{
+  float: right;
+  padding-right: 197px;
+}
+.container
+{
+  font-weight: bold;
+  font-size: 55px;
+  color: blue;
+  font-family: "pristina";
+  padding-left: 260px;
+}
+
+.nav {
+  padding-left: 192px;
+}
+.nav a {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "century gothic"; 
+  color: white;
+  background-color: blue;
+  display: block;
+  padding: 10px  35px;
+
+}
+.pims :hover
+{
+background-color: red;
+}
+.hims :hover
+{
+background-color: wheat;
+}
+.nav li
+{ 
+  display:inline-block;
+  margin-right: -4px;
+}
+.nav a:hover
+{		
+  background-color:black;
+}
+
+.txt
+{
+  font-family: "century gothic";
+  text-align: justify;
+  font-size: 18px;
+  padding-left: 233px;
+  padding-right: 220px;
+  color: blue;
+  align-content: center;
+}
+.color
+{
+  font-family: "century gothic";
+  text-align: justify;
+  font-size: 18px;
+  padding-left: 233px;
+  padding-right: 220px;
+  color: red;
+  align-content: center;
+}
+.product
+{
+  float: left;
+  padding-left: 100px;
+  padding-top: 25px;
+}
+.welc
+{
+  float:right;
+  padding-left: 73px;
+  text-align: center;
+  font-weight:bold;
+}
+.welcm
+{
+  font-family: "century gothic";
+  font-weight:bold;
+  text-align: justify;
+  font-size: 20px;
+  padding-left: 400px;
+  padding-right: 220px;
+  padding-bottom: 300px;
+  color: blue;
+  align-content: center;
+}
+.ring 
+{
+  font-weight:bold;
+  background-color: white;
+  font-size:50px;
+  color:blue;
+  font-family:"pristina";
+  padding-left:50px;
+}
+
+.form1
+{
+  padding-left:500px;
+  font-weight:bold;
+  font-size:40px;
+  color: blue;
+  padding-top: 100px;
+	
+}
+.txt3
+{
+  font-family: "Arial";
+  text-align: justify;
+  font-size: 18px;
+  padding-left: 300px;
+  padding-right: 220px;
+  padding-bottom: 600px;
+  color: green;
+  align-content: center;
+}
+
+.form3 :hover
+{
+  background-color:pink;
+}*/

@@ -1,0 +1,2630 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <link href="main.css" rel="stylesheet" type="text/css" media="screen"/>
+    <style>
+	#str{
+	background-color:wheat;
+	}
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+	  #se{
+	  background-color:pink;
+	  }
+	  #de{
+	  background-color:wheat;
+	  }
+    </style>
+  </head>
+  <body background="image\ii.jpg">
+  <form >
+	<div style="position: absolute; top:0; left:0; width: 800px;height: 100px; text-align:left; color:maroon">
+	<i><b>ENTER THE NUMBERS OF NODES: </i></b>
+	<div class="pims">
+	<input type="text" id="str" />
+<input type="button" value="SUBMIT" id="SUBMIT"  onclick="rings()" />
+</div>
+<i><b>ENTER THE SOURCE NODE:
+	<input type="text" id="se" />
+	<div class="hims">
+	ENTER THE DESTINATIONS NODE:
+	<input type="text" id="de" /></i></b>
+	
+	 <input type="button" value="SUBMIT" id="SUBMIT" onclick="cir1()" />
+	<input type="button" value="Reset" onClick="history.go(0)">
+	</div>
+	</div>
+	<a href="index.html"><p align="right"><b>BackToHome</b></p></a>
+	<big> <i style="color:navy; font-size:25px"><br><br><marquee width="100%"><b style="color:red">NOTE:</b>Enter the number of nodes for mesh network after than enter the source node and destination node to describe the path between two nodes.</big></marquee>
+	</form>
+	<br>
+    <canvas id="myCanvas" width="1527" height="600"style="border:1px solid blue;background: navy;"></canvas>
+  
+    <script>
+	function rings()
+	{
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var X = 230;
+      var Y = 100;
+      var r = 10;
+	  var mx=500;
+	  var my=500;
+	  var l=5;
+	  var i
+	  context.beginPath();
+	  var str = document.getElementById("str").value;
+if(isNaN(document.getElementById("str").value))
+{
+alert("please do not enter any special character");
+clear();
+}
+	  if(str!=3&&str!=4)
+	  {
+	  for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0,2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	  else
+	 if(str==3)
+	 {
+	  var X = 40;
+      var Y = 40;
+      var r = 10;
+	 for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	  if(str==3)
+	  {
+	   context.font="20px georgia";
+	  context.fillText("1",35,20);
+	   context.fillText("2",95,20);
+	   context.fillText("3",73,130);
+	   context.fillStyle = 'white';
+	   }
+	  if (str==3)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(40+i*120,40);
+                  context.lineTo(70+i*60,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+	 }
+	  if (str==3)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(70+i*120,100);
+                  context.lineTo(100+i*60,40);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+	 }
+	  else
+	 if(str==4)
+	 {
+	  var X = 230;
+      var Y = 100;
+      var r = 10;
+	 for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	   if (str==4)
+	  {
+	  for (i=0;i<2;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(230+i*60,100);
+                  context.lineTo(230+i*60,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   }
+			   if (str==4)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(230+i*100,100);
+                  context.lineTo(295+i*100,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+	 }
+	 if (str==4)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(300+i*100,100);
+                  context.lineTo(230+i*100,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+	 }
+	  if(str==4)
+	  {
+	   context.font="20px georgia";
+	  context.fillText("1",220,90);
+	  context.fillText("2",300,90);
+	  context.fillText("3",197,224);
+	   context.fillText("4",305,224);
+	   context.fillText("---> See the main disadvantage of mesh network is redundancy means multiple paths between  ",400,300);
+		context.fillText(" ---> any two node that's why we choose the smallest path",400,320);
+		context.fillText("--->For example from node 1 to node 3 multiple paths exist but we take an small path.",400,340);
+	   context.fillStyle = 'white';
+	   }			   
+	   if(str==2)
+	  {
+	   context.font="20px georgia";
+	  context.fillText("1",230,80);
+	  context.fillText("2",290,80);
+	   context.fillStyle = 'white';
+	   }			   
+	  
+	  rings1();
+	  rings2();
+	  if(str>=9)
+	 
+          {
+	  alert("mesh network is shown only for 8 number of nodes beacuse of the canvas size.");
+clears();
+	  }
+        if(str==0)
+	 
+          {
+	  alert(" no mesh for 0 node");
+        clears();
+	  }
+ if(str==1)
+	 
+          {
+	  alert(" no mesh for 1 node");
+        clears();
+	  }
+
+
+
+
+
+	   }
+	   function rings1()
+	{
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var X = 190;
+      var Y = 160;
+      var r = 10;
+	  var mx=500;
+	  var my=500;
+	  var l=5;
+	  var i
+	  context.beginPath();
+	  var str = document.getElementById("str").value;
+	  if(str!=3&&str!=4&&str!=5&&str!=7&&str!=8)
+	  {
+	  for(submit=1;submit<=str-4;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+133;
+	  Y=Y+0;
+	  }
+	  }
+	   else
+	  if(str==5)
+	  {
+	   var X = 270;
+      var Y = 280;
+      var r = 10;
+	   for(submit=1;submit<=1;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  }
+	  }
+	   else
+	 if(str==3)
+	 {
+	 for(submit=1;submit<=1;submit++)
+	  {
+      context.arc(70, 100, r, 0, 2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	  else
+	  if(str==8)
+	  {
+	  mesh8();
+	   var X = 150;
+      var Y = 160;
+      var r = 10;
+	  var mx=500;
+	  var my=500;
+	  var l=5;
+	  var i
+	  context.beginPath();
+	  var str = document.getElementById("str").value;
+	  for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+230;
+	  Y=Y+0;
+	  }
+	  
+	  }
+	  if(str==8)
+	  {
+	  context.beginPath();
+	   context.font="20px georgia";
+	   context.fillStyle = 'yellow';
+	  context.fillText("1",220,80);
+	  context.fillText("2",290,80);
+	  context.fillText("8",125,165);
+	   context.fillText("3",400,150);
+	   context.fillText("4",400,250);
+	    context.fillText("5",310,345);
+		context.fillText("6",200,345);
+		context.fillText("7",125,265);
+		context.fillText("---> See the main disadvantage of mesh network is redundancy means multiple paths between  ",400,300);
+		context.fillText(" ---> any two node that's why we choose the smallest path",400,320);
+		context.fillText("--->For example from node 1 to node 3 multiple paths exist but we take an small path.",400,340);
+	   }		
+	  if (str==8)
+	  {
+	  for (i=0;i<2;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*230,160);
+                  context.lineTo(150+i*230,260);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*200,160);
+                  context.lineTo(220+i*200,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*200,160);
+                  context.lineTo(280+i*200,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(390+i*200,160);
+                  context.lineTo(220+i*200,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*200,160);
+                  context.lineTo(230+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*200,160);
+                  context.lineTo(290+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(290+i*200,100);
+                  context.lineTo(150+i*200,260);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(390+i*200,260);
+                  context.lineTo(220+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(390+i*200,160);
+                  context.lineTo(220+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(390+i*200,160);
+                  context.lineTo(290+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(390+i*200,160);
+                  context.lineTo(150+i*200,260);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*200,160);
+                  context.lineTo(390+i*200,260);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(380+i*200,160);
+                  context.lineTo(300+i*200,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*200,260);
+                  context.lineTo(230+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(380+i*200,260);
+                  context.lineTo(290+i*200,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<2;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(230+i*60,100);
+                  context.lineTo(230+i*60,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(150+i*80,260);
+                  context.lineTo(230+i*80,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(380+i*80,260);
+                  context.lineTo(290+i*80,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(230+i*80,100);
+                  context.lineTo(290+i*80,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(290+i*80,100);
+                  context.lineTo(230+i*80,330);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(230+i*80,100);
+                  context.lineTo(380+i*80,260);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 5;
+                  context.beginPath();
+                  context.moveTo(290+i*80,100);
+                  context.lineTo(380+i*80,260);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+	 }
+	  
+	  
+	 
+	  else
+	 if(str==7)
+	 {
+	  var X = 190;
+      var Y = 160;
+      var r = 10;
+	 for(submit=1;submit<=3;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+67;
+	  Y=Y+0;
+	  }
+	  }
+	  }
+	  function mesh8()
+	  {
+	  
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var X = 150;
+      var Y = 260;
+      var r = 10;
+	  var mx=500;
+	  var my=500;
+	  var l=5;
+	  var i
+	  context.beginPath();
+	  var str = document.getElementById("str").value;
+	  for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+230;
+	  Y=Y+0;
+	  }
+	  
+	 }
+	  function rings2()
+	{
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var X = 230;
+      var Y = 220;
+      var r = 10;
+	  var mx=500;
+	  var my=500;
+	  var l=5;
+	  var i
+	  context.beginPath();
+	  var str = document.getElementById("str").value;
+	  if(str!=3&&str!=4&&str!=5&&str!=7&&str!=8)
+	  {
+	  for(submit=1;submit<=str-4;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	   else
+	 if(str==4)
+	 {
+	  var X = 230;
+      var Y = 220;
+      var r = 10;
+	 for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	  else
+	  if(str==8)
+	  {
+	  var X = 230;
+      var Y = 330;
+      var r = 10;
+	  var mx=500;
+	  var my=500;
+	  var l=5;
+	  context.beginPath();
+	  var str = document.getElementById("str").value;
+	  for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	  else
+	   if(str==7)
+	  {
+	  var X = 230;
+      var Y = 220;
+      var r = 10;
+	  for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+60;
+	  Y=Y+0;
+	  }
+	  }
+	   if(str==7)
+	  {
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(300+i*40,100);
+                  context.lineTo(190+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(300+i*40,100);
+                  context.lineTo(250+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,220);
+                  context.lineTo(250+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(290+i*40,220);
+                  context.lineTo(250+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(250+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   }
+			    if(str==7)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(190+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(190+i*40,160);
+                  context.lineTo(230+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(290+i*40,220);
+                  context.lineTo(333+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			     for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(333+i*40,160);
+                  context.lineTo(290+i*40,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<2;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*60,100);
+                  context.lineTo(230+i*60,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(240+i*40,100);
+                  context.lineTo(290+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			     for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(300+i*40,100);
+                  context.lineTo(235+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(190+i*40,160);
+                  context.lineTo(290+i*40,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(190+i*40,160);
+                  context.lineTo(290+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(333+i*40,160);
+                  context.lineTo(230+i*40,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			     for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(333+i*40,160);
+                  context.lineTo(230+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+ if(str==7)
+	  {
+	  context.beginPath();
+	   context.font="20px georgia";
+	   context.fillStyle = 'yellow';
+	  context.fillText("1",210,90);
+	  context.fillText("2",310,90);
+	  context.fillText("3",337,165);
+	   context.fillText("4",310,230);
+	   context.fillText("5",205,230);
+	    context.fillText("6",160,165);
+		context.fillText("7",248,163);
+		context.fillText("---> See the main disadvantage of mesh network is redundancy means multiple paths between  ",400,300);
+		context.fillText(" ---> any two node that's why we choose the smallest path",400,320);
+		context.fillText("--->For example from node 1 to node 3 multiple paths exist but we take an small path.",400,340);
+	   }		
+		}
+	  else
+	  if(str==5)
+	  {
+	   var X = 200;
+      var Y = 220;
+      var r = 10;
+	   for(submit=1;submit<=2;submit++)
+	  {
+      context.arc(X, Y, r, 0, 2 * Math.PI, false);
+	  
+      context.fillStyle = 'white';
+      context.fill();
+	  context.lineWidth = l;
+      context.strokeStyle = 'white';
+      
+      context.stroke();
+	  X=X+160;
+	  Y=Y+0;
+	  }
+	  }
+	   if(str==5)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(200+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(295+i*40,100);
+                  context.lineTo(360+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(270+i*40,280);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(295+i*40,100);
+                  context.lineTo(270+i*40,280);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(295+i*40,100);
+                  context.lineTo(200+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(360+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(200+i*40,220);
+                  context.lineTo(270+i*40,280);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(360+i*40,220);
+                  context.lineTo(270+i*40,280);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   if(str==5)
+	  {
+	   context.font="20px georgia";
+	  context.fillText("1",210,90);
+	  context.fillText("2",310,90);
+	   context.fillText("3",380,220);
+	    context.fillText("4",270,305);
+		 context.fillText("5",170,225);
+		 context.fillText("---> See the main disadvantage of mesh network is redundancy means multiple paths between  ",400,300);
+		context.fillText(" ---> any two node that's why we choose the smallest path",400,320);
+		context.fillText("--->For example from node 1 to node 3 multiple paths exist but we take an small path.",400,340);
+	   context.fillStyle = 'white';
+	   }			   
+	   }
+	  
+	  if(str==6)
+	  {
+	  for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(190+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(190+i*40,160);
+                  context.lineTo(230+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(290+i*40,220);
+                  context.lineTo(333+i*40,160);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			     for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(333+i*40,160);
+                  context.lineTo(290+i*40,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<2;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*60,100);
+                  context.lineTo(230+i*60,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			   for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(230+i*40,100);
+                  context.lineTo(290+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			     for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(290+i*40,100);
+                  context.lineTo(230+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(190+i*40,160);
+                  context.lineTo(290+i*40,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(190+i*40,160);
+                  context.lineTo(290+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			    for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(333+i*40,160);
+                  context.lineTo(230+i*40,100);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }  
+			     for (i=0;i<1;i++)
+	  {
+	  context.linewidth=5;
+                  context.lineWidth = 6;
+                  context.beginPath();
+                  context.moveTo(333+i*40,160);
+                  context.lineTo(230+i*40,220);
+				  context.strokeStyle = 'white';
+                  context.stroke();
+				  
+               }
+ if(str==6)
+	  {
+	   context.font="20px georgia";
+	  context.fillText("1",210,90);
+	  context.fillText("2",310,90);
+	  context.fillText("3",337,165);
+	   context.fillText("4",310,230);
+	   context.fillText("5",205,230);
+	    context.fillText("6",160,165);
+		context.fillText("---> See the main disadvantage of mesh network is redundancy means multiple paths between  ",400,300);
+		context.fillText(" ---> any two node that's why we choose the smallest path",400,320);
+		context.fillText("--->For example from node 1 to node 3 multiple paths exist but we take an small path.",400,340);
+	   context.fillStyle = 'white';
+	   }			   
+		}		  
+	  }
+	  function cir()
+{
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+var se = document.getElementById("se").value;
+var de = document.getElementById("de").value;
+var str = document.getElementById("str").value;
+if(str!=3&&str!=5&&str!=8)
+{
+if(se==1 && de==6 || se==6&&de==1)
+{
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+    ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 && de==5 || se==5&&de==1)
+{
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+    ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 && de==7|| se==7&&de==1)
+{
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+    ctx.arc(255, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 && de==4 || se==4&&de==1)
+{
+			    ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+			   ctx.arc(290, 220, 10, 0, 2 * Math.PI);   
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+
+
+
+else
+if(se==2 && de==6 || se==6&&de==2)
+{
+	  ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+    ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==2 && de==5 || se==5&&de==2)
+{
+	  ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+    ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==2 && de==7|| se==7&&de==2)
+{
+	  ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+    ctx.arc(255, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==2 && de==4 || se==4&&de==2)
+{
+			    ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+			   ctx.arc(290, 220, 10, 0, 2 * Math.PI);   
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+
+
+
+
+
+else
+if(se==3 && de==6 || se==6&&de==3)
+{
+	  ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+    ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==3 && de==5 || se==5&&de==3)
+{
+	  ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+    ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==3 && de==7|| se==7&&de==3)
+{
+	  ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+    ctx.arc(255, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==3 && de==4 || se==4&&de==3)
+{
+			    ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+			   ctx.arc(290, 220, 10, 0, 2 * Math.PI);   
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==4 && de==6 || se==6&&de==4)
+{
+	  ctx.arc(290, 220, 10, 0, 2 * Math.PI);
+    ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==4 && de==5 || se==5&&de==4)
+{
+	  ctx.arc(290, 220, 10, 0, 2 * Math.PI);
+    ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==4 && de==7|| se==7&&de==4)
+{
+	  ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+    ctx.arc(255, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+
+
+else
+if(se==5 && de==6 || se==6&&de==5)
+{
+	  ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+    ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==5 && de==7|| se==7&&de==5)
+{
+	  ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+    ctx.arc(255, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==6 && de==7|| se==7&&de==6)
+{
+	  ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+    ctx.arc(255, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+
+
+else
+if(se==4)
+{
+ctx.arc(290, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==5)
+{
+ctx.arc(230, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==6)
+{
+ctx.arc(190, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+
+}
+if(se==7)
+{
+ctx.arc(250, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+}
+else
+if(str==8)
+{
+if(se==1&&de==2 || se==2&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(290, 100);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+	  ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 &&de==3 || se==3&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(380, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==4 || se==4&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(380, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==5 || se==5&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(290, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==6 || se==6&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(230, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==7 || se==7&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(150, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==8 || se==8&&de==1)
+{
+ctx.moveTo(224, 100);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==3 || se==3&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(380, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==4 || se==4&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(380, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==5 || se==5&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(290, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==6 || se==6&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(230, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==7 || se==7&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(150, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==8 || se==8&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+
+
+
+
+else
+if(se==3 &&de==4 || se==4&&de==3)
+{
+ctx.moveTo(380, 160);
+      ctx.lineTo(380, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==3 &&de==5 || se==5&&de==3)
+{
+ctx.moveTo(380, 160);
+      ctx.lineTo(290, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==3 &&de==6 || se==6&&de==3)
+{
+ctx.moveTo(380, 160);
+      ctx.lineTo(225, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==3 &&de==7 || se==7&&de==3)
+{
+ctx.moveTo(380, 160);
+      ctx.lineTo(150, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==3 &&de==8 || se==8&&de==3)
+{
+ctx.moveTo(380, 160);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==4 &&de==5 || se==5&&de==4)
+{
+ctx.moveTo(380, 260);
+      ctx.lineTo(290, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==4 &&de==6 || se==6&&de==4)
+{
+ctx.moveTo(380, 260);
+      ctx.lineTo(225, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==4 &&de==7 || se==7&&de==4)
+{
+ctx.moveTo(380, 260);
+      ctx.lineTo(150, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==4 &&de==8 || se==8&&de==4)
+{
+ctx.moveTo(380, 260);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==5 &&de==6 || se==6&&de==5)
+{
+ctx.moveTo(290, 330);
+      ctx.lineTo(225, 330);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==5 &&de==7 || se==7&&de==5)
+{
+ctx.moveTo(290, 330);
+      ctx.lineTo(150, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==5 &&de==8 || se==8&&de==5)
+{
+ctx.moveTo(290, 330);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==6 &&de==7 || se==7&&de==6)
+{
+ctx.moveTo(230, 330);
+      ctx.lineTo(150, 260);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==6 &&de==8 || se==8&&de==6)
+{
+ctx.moveTo(230, 330);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==7 &&de==8 || se==8&&de==7)
+{
+ctx.moveTo(150, 260);
+      ctx.lineTo(150, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+}
+
+
+
+else
+if(str==5)
+{
+if(se==1&&de==2 || se==2&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(290, 100);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+	  ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 &&de==3 || se==3&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(360, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==4 || se==4&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(270, 280);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==5 || se==5&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(200, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==3 || se==3&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(360, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==4 || se==4&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(270, 280);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==5 || se==5&&de==2)
+{
+ctx.moveTo(290, 100);
+      ctx.lineTo(200, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==3 &&de==4 || se==4&&de==3)
+{
+ctx.moveTo(360, 220);
+      ctx.lineTo(270, 280);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(360, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==3 &&de==5 || se==5&&de==3)
+{
+ctx.moveTo(360, 220);
+      ctx.lineTo(200, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(360, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==4 &&de==5 || se==5&&de==4)
+{
+ctx.moveTo(270, 280);
+      ctx.lineTo(200, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(270, 280, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+}
+else
+if(str==3)
+{
+if(se==1 &&de==2 || se==2&&de==1)
+{
+ctx.moveTo(40, 40);
+      ctx.lineTo(100, 40);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(40, 40, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==1 &&de==3 || se==3&&de==1)
+{
+ctx.moveTo(40, 40);
+      ctx.lineTo(70, 100);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(40, 40, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+else
+if(se==2 &&de==3 || se==3&&de==2)
+{
+ctx.moveTo(100, 40);
+      ctx.lineTo(70, 100);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(100, 40, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+}
+else
+if(str==4)
+{
+if(se==1 &&de==3 || se==3&&de==1)
+{
+ctx.moveTo(230, 100);
+      ctx.lineTo(230, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+}
+}
+}
+
+	  function cir1()
+{
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+var de = document.getElementById("de").value;
+var str = document.getElementById("str").value;
+var se = document.getElementById("se").value;
+if(se==0||de==0)
+{
+alert("do not select source and destination node as 0");
+}
+if(se>=9||de>=9)
+{
+alert("as mesh network is given only for 8 number of nodes so select source and destination number upto 8 only");
+
+}
+if(str==5)
+{
+if(se>5||de>5)
+{
+alert("as mesh network is given only for 5 number of nodes so select source and destination number upto 5 only");
+}
+}
+if(str==4)
+{
+if(se>4||de>4)
+{
+alert("as mesh network is given only for 4 number of nodes so select source and destination number upto 4 only");
+}
+}
+if(str==3)
+{
+if(se>3||de>3)
+{
+alert("as mesh network is given only for 3 number of nodes so select source and destination number upto 3 only");
+}
+}
+if(str==6)
+{
+if(se>6||de>6)
+{
+alert("as mesh network is given only for 6 number of nodes so select source and destination number upto 6 only");
+}
+}
+if(str==7)
+{
+if(se>7||de>7)
+{
+alert("as mesh network is given only for 7 number of nodes so select source and destination number upto 7 only");
+}
+}
+if(str==8)
+{
+if(se>8||de>8)
+{
+alert("as mesh network is given only for 8 number of nodes so select source and destination number upto 8 only");
+}
+}
+if(str==2)
+{
+if(se>2||de>2)
+{
+alert("as mesh network is given only for 2 number of nodes so select source and destination number upto 2 only");
+}
+}
+
+
+if(str!=3&&str!=5&&str!=8)
+{
+if(se==1 && de==2 || se==2&&de==1)
+{
+      ctx.moveTo(230, 100);
+      ctx.lineTo(290, 100);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+      ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 && de==3 || se==3&&de==1)
+{
+      ctx.moveTo(230, 100);
+      ctx.lineTo(330, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  ctx.arc(230, 100, 10, 0, 2 * Math.PI);
+     ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==1 && de==4 || se==4&&de==1)
+{
+                   ctx.moveTo(230, 100);
+                    ctx.lineTo(290, 220);
+                    ctx.lineWidth = 5;
+	                 ctx.strokeStyle = '#ff0000';
+                      ctx.stroke();
+			    cir();
+}
+else
+if(se==1 && de==5 || se==5&&de==1)
+{
+      ctx.moveTo(230, 100);
+      ctx.lineTo(230, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==1 && de==6 || se==6&&de==1)
+{
+      ctx.moveTo(230, 100);
+      ctx.lineTo(190, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==1 && de==7|| se==7&&de==1)
+{
+      ctx.moveTo(230, 100);
+      ctx.lineTo(250, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==2 && de==3 || se==3&&de==2)
+{
+      ctx.moveTo(290, 100);
+      ctx.lineTo(330, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+     ctx.arc(323, 160, 10, 0, 2 * Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
+}
+else
+if(se==2 && de==4 || se==4&&de==2)
+{
+                   ctx.moveTo(290, 100);
+                    ctx.lineTo(290, 220);
+                    ctx.lineWidth = 5;
+	                 ctx.strokeStyle = '#ff0000';
+                      ctx.stroke();
+			    cir();
+}
+else
+if(se==2 && de==5 || se==5&&de==2)
+{
+      ctx.moveTo(290, 100);
+      ctx.lineTo(230, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==2 && de==6 || se==6&&de==2)
+{
+      ctx.moveTo(290, 100);
+      ctx.lineTo(190, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==2 && de==7|| se==7&&de==2)
+{
+      ctx.moveTo(290, 100);
+      ctx.lineTo(250, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+
+
+
+
+else
+if(se==3 && de==4 || se==4&&de==3)
+{
+                   ctx.moveTo(330, 160);
+                    ctx.lineTo(290, 220);
+                    ctx.lineWidth = 5;
+	                 ctx.strokeStyle = '#ff0000';
+                      ctx.stroke();
+			    cir();
+}
+else
+if(se==3 && de==5 || se==5&&de==3)
+{
+      ctx.moveTo(330, 160);
+      ctx.lineTo(230, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==3 && de==6 || se==6&&de==3)
+{
+      ctx.moveTo(330, 160);
+      ctx.lineTo(190, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==3&& de==7|| se==7&&de==3)
+{
+      ctx.moveTo(330, 160);
+      ctx.lineTo(250, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+
+
+
+
+else
+if(se==4 && de==5 || se==5&&de==4)
+{
+      ctx.moveTo(290, 220);
+      ctx.lineTo(230, 220);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==4 && de==6 || se==6&&de==4)
+{
+      ctx.moveTo(290, 220);
+      ctx.lineTo(190, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==4&& de==7|| se==7&&de==4)
+{
+      ctx.moveTo(290, 220);
+      ctx.lineTo(250, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==5 && de==6 || se==6&&de==5)
+{
+      ctx.moveTo(230, 220);
+      ctx.lineTo(190, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==5&& de==7|| se==7&&de==5)
+{
+      ctx.moveTo(230, 220);
+      ctx.lineTo(250, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+else
+if(se==6&& de==7|| se==7&&de==6)
+{
+      ctx.moveTo(190, 160);
+      ctx.lineTo(250, 160);
+      ctx.lineWidth = 5;
+	  ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+	  cir();
+}
+}
+else
+if(str==8)
+{
+if(se==1 &&de==3 || se==3&&de==1)
+{
+
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==4 || se==4&&de==1)
+{
+
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==5 || se==5&&de==1)
+{
+
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==2 || se==2&&de==1)
+{
+
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==3 || se==3&&de==1)
+{
+
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==6|| se==6&&de==1)
+{
+
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==7|| se==7&&de==1)
+{
+
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==8|| se==8&&de==1)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+
+
+else
+if(se==2 &&de==3 || se==3&&de==2)
+{
+
+ctx.arc(380, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==4 || se==4&&de==2)
+{
+
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==5 || se==5&&de==2)
+{
+
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==6|| se==6&&de==2)
+{
+
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==7|| se==7&&de==2)
+{
+
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==8|| se==8&&de==2)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+
+
+else
+if(se==3 &&de==4 || se==4&&de==3)
+{
+
+ctx.arc(380, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==3 &&de==5 || se==5&&de==3)
+{
+
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==3 &&de==6|| se==6&&de==3)
+{
+
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==3 &&de==7|| se==7&&de==3)
+{
+
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==3 &&de==8|| se==8&&de==3)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==4 &&de==5 || se==5&&de==4)
+{
+
+ctx.arc(290, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==4 &&de==6|| se==6&&de==4)
+{
+
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==4 &&de==7|| se==7&&de==4)
+{
+
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==4 &&de==8|| se==8&&de==4)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==5 &&de==6|| se==6&&de==5)
+{
+
+ctx.arc(230, 330, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==5 &&de==7|| se==7&&de==5)
+{
+
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==5 &&de==8|| se==8&&de==5)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==6 &&de==7|| se==7&&de==6)
+{
+
+ctx.arc(150, 260, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==6 &&de==8|| se==8&&de==6)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==7 &&de==8|| se==8&&de==7)
+{
+
+ctx.arc(150, 160, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+}
+else
+if(str==5)
+{
+if(se==1 &&de==3 || se==3&&de==1)
+{
+
+ctx.arc(360, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==4 || se==4&&de==1)
+{
+
+ctx.arc(270, 280, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==5 || se==5&&de==1)
+{
+
+ctx.arc(200, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==2 || se==2&&de==1)
+{
+
+ctx.arc(290, 100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==3 || se==3&&de==2)
+{
+
+ctx.arc(360, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==4 || se==4&&de==2)
+{
+
+ctx.arc(270, 280, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==5 || se==5&&de==2)
+{
+
+ctx.arc(200, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==3 &&de==4 || se==4&&de==3)
+{
+
+ctx.arc(270, 280, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==3 &&de==5 || se==5&&de==3)
+{
+
+ctx.arc(200, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==4 &&de==5 || se==5&&de==4)
+{
+
+ctx.arc(200, 220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+}
+if(str==3)
+{
+if(se==1 &&de==2 || se==2&&de==1)
+{
+
+ctx.arc(100,40, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==1 &&de==3|| se==3&&de==1)
+{
+
+ctx.arc(70,100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+else
+if(se==2 &&de==3|| se==3&&de==2)
+{
+
+ctx.arc(70,100, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+}
+else
+if(str==4)
+{
+if(se==1 &&de==3 || se==3&&de==1)
+{
+ctx.arc(230,220, 10, 0, 2 * Math.PI);
+ctx.fillStyle="red";
+ctx.fill();
+cir();
+}
+}
+}
+function clears()
+{
+var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+context.clearRect(0,0,canvas.width,canvas.height);
+}
+
+
+
+    </script>
+  </body>
+</html>      
+	

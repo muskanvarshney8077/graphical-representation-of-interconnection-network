@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Graphical Representation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css"> 
+		
+</head>
+<body>
+<body>	
+<section id="title">
+<div class="container-fluid">
+		<nav class="navbar navbar-expand-sm navbar-dark  fixed">
+      <a class="navbar-brand" href="#">ISolution</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Ring.html">Ring</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Bus.html">Bus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Hypercube.html">Hypercube</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="Crossbar.html">Crossbar</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="Mesh.html">Mesh</a>
+      </li>
+	  
+      </ul>
+    
+    </div>
+  </nav>
+	<div class="row">
+<div class="col-lg-6" >
+<h1>The thing that connect the world together.</h1>
+</div>
+<div class="col-lg-6">
+      <img src="image/titleimage.jpg" alt="iphone-mockup">
+      </div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="container">
+<p class="paragraph">An interconnection network in a parallel machine transfers information from any source node to any desired destination node. This task should be completed with as small latency as possible. It should allow a large number of such transfers to take place concurrently. Moreover, it should be inexpensive as compared to the cost of the rest of the machine.
+
+The network is composed of links and switches, which helps to send the information from the source node to the destination node. A network is specified by its topology, routing algorithm, switching strategy, and flow control mechanism.
+Organizational Structure
+Interconnection networks are composed of following three basic components −
+
+<h5>Links</h5> − A link is a cable of one or more optical fibers or electrical wires with a connector at each end attached to a switch or network interface port. Through this, an analog signal is transmitted from one end, received at the other to obtain the original digital information stream.
+
+<h5>Switches</h5> − A switch is composed of a set of input and output ports, an internal “cross-bar” connecting all input to all output, internal buffering, and control logic to effect the input-output connection at each point in time. Generally, the number of input ports is equal to the number of output ports.
+
+<h5>Network Interfaces</h5> − The network interface behaves quite differently than switch nodes and may be connected via special links. The network interface formats the packets and constructs the routing and control information. It may have input and output buffering, compared to a switch. It may perform end-to-end error checking and flow control. Hence, its cost is influenced by its processing complexity, storage capacity, and number of ports.
+
+<h4>Interconnection Network</h4>
+Interconnection networks are composed of switching elements. Topology is the pattern to connect the individual switches to other elements, like processors, memories and other switches. A network allows exchange of data between processors in the parallel system.
+
+<h5>Direct connection networks</h5> − Direct networks have point-to-point connections between neighboring nodes. These networks are static, which means that the point-to-point connections are fixed. Some examples of direct networks are rings, meshes and cubes.
+
+<h5>Indirect connection networks</h5> − Indirect networks have no fixed neighbors. The communication topology can be changed dynamically based on the application demands. Indirect networks can be subdivided into three parts: bus networks, multistage networks and crossbar switches.
+
+<h6>Bus networks </h6>− A bus network is composed of a number of bit lines onto which a number of resources are attached. When busses use the same physical lines for data and addresses, the data and the address lines are time multiplexed. When there are multiple bus-masters attached to the bus, an arbiter is required.
+
+<h6>Multistage networks</h6> − A multistage network consists of multiple stages of switches. It is composed of ‘axb’ switches which are connected using a particular interstage connection pattern (ISC). Small 2x2 switch elements are a common choice for many multistage networks. The number of stages determine the delay of the network. By choosing different interstage connection patterns, various types of multistage network can be created.
+
+<h6>Crossbar switches </h6>− A crossbar switch contains a matrix of simple switch elements that can switch on and off to create or break a connection. Turning on a switch element in the matrix, a connection between a processor and a memory can be made. Crossbar switches are non-blocking, that is all communication permutations can be performed without blocking.
+</p>
+</div>
+</section>	
+<div class="container-fluid bottom-container" align="center">
+
+    <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+    <a class="footer-link" href="https://twitter.com/">Twitter</a>
+    <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+    <p>© 2020 ISolution</p>
+  </div>	
+
+	</body>
+</html>
